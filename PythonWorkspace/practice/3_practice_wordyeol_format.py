@@ -18,4 +18,4 @@ print("나는 {age}살이며, {color}색을 좋아해요.".format(age = 20, colo
 #방법 4
 age = 20
 color = "빨간"
-print(f"나는 {age}살이며, {color}색을 좋아해요.")
+print(f"나는 {age}살이며, {color}색을 좋아해요.")  3432432423 3   3 32 23   32 3333112132
