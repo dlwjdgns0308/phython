@@ -21,11 +21,27 @@ def okcancel():
 def retrycancel():
     msbox.askretrycancel("재시도/ 취소", "일시적인 오류입니다. 다시 시도하시겠습니까?")
 
+def yesno():
+    msbox.askyesno("예/ 아니요", "해당좌석은 역방향입니다. 예매하시겠습니까?")
+
+def yesnocancel():
+    response = msbox.askyesnocancel(title=None, message="예매 내역이 저장되지 않았습니다.\n 저장하시겠습니까?")
+    #네 : 저장후 종료, 아니요: 저장안하고 종료, 취소 : 종료취소
+    print("응답:", response) # True ->1, False ->0
+    if response == 1:
+        print("예")
+    elif response == 0:
+        print("아니요")
+    else:
+        print("취소")
+
 
 Button(root, command=info, text="알림").pack()
 Button(root, command=warn, text="경고").pack()
 Button(root, command=error, text="에러").pack()
 Button(root, command=okcancel, text="확인 취소").pack()
 Button(root, command=retrycancel, text="재시도/ 취소").pack()
+Button(root, command=yesno, text="예 아니요").pack()
+Button(root, command=yesnocancel, text="예 아니요 취소").pack()
 
 root.mainloop()
