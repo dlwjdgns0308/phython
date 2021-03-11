@@ -13,3 +13,13 @@ print(java | python)
 print(java.union(python))
 
 #차집합
+print(java - python)
+print(java.difference(python))
+
+# python 할 줄 아는 사람이 늘어남
+python.add("김태호")
+print(python)
+
+#java 빼기
+java.remove("김태호")
+print(java)
