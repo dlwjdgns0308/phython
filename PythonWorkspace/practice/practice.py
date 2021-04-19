@@ -1,18 +1,14 @@
-C = int(input())
-result = 0
-b = 0
-for i in range(C):
-    num = list(map(int, input()))
-    a = num[0]
-    del num[0]
-    for j in num:
-        j = j / a
-        result = result + j
-    for k in num    
-    if k <= result:
-        del num[b]
-        b += 1
-    else:
-        b += 1
-    g = count(num) / a
-    print(g)
+T = int(input())
+chng = 1
+ho = 1
+for i in range(T):
+    H,W,N = map(int, input().split())
+    for j in range(N):
+        if H > chng:
+            chng += 1
+        elif H <= chng:
+            chng = 1
+            ho += 1
+    chng = str(chng)
+    ho = str(ho)
+    print(chng+ "d"+ho)
