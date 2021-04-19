@@ -20,7 +20,7 @@ while running:
             running = False # 게임이 진행중이 아님
 
 
-    #screen.fill((0, 0, 255))
+    #screen.fill((0, 0, 255)) 단색으로 채우기
     screen.blit(background, (0, 0)) # 배경 그리기
 
     pygame.display.update() # 게임화면 다시 그리기!
