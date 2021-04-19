@@ -18,10 +18,10 @@ clock = pygame.time.Clock()
 ###############################################################
 
 # 1. 사용자 게임 초기화 (배경화면, 게임 이미지, 좌표, 속도, 폰트 등)
-background = pygame.image.load("C:/Users/이정훈/Desktop/PythonWorkspace/pygame_basic/background.png")
+background = pygame.image.load("C:/Users/marat/OneDrive/바탕 화면/PythonWorkspace/phython/PythonWorkspace/pygame_basic/background.png")
 
 # 캐릭터 설정
-character = pygame.image.load("C:/Users/이정훈/Desktop/PythonWorkspace/pygame_basic/character.png")
+character = pygame.image.load("C:/Users/marat/OneDrive/바탕 화면/PythonWorkspace/phython/PythonWorkspace/pygame_basic/character.png")
 character_size = character.get_rect().size # 이미지의 크기를 구해옴
 character_width = character_size[0] # 캐릭터의 가로 크기
 character_height = character_size[1] # 캐릭터의 세로 크기
@@ -29,7 +29,7 @@ character_x_pos = screen_width / 2 - character_width / 2  # 화면 가로의 절
 character_y_pos = screen_height - character_height # 화면 세로 크기 가장 아래에 해당하는 곳에 위치(세로)
 
 # 적 설정
-enemy = pygame.image.load("C:/Users/이정훈/Desktop/PythonWorkspace/pygame_basic/enemy.png")
+enemy = pygame.image.load("C:/Users/marat/OneDrive/바탕 화면/PythonWorkspace/phython/PythonWorkspace/pygame_basic/enemy.png")
 enemy_size = enemy.get_rect().size # 이미지의 크기를 구해옴
 enemy_width = enemy_size[0] # 캐릭터의 가로 크기
 enemy_height = enemy_size[1] # 캐릭터의 세로 크기
