@@ -13,7 +13,7 @@ def shuffle_grid(number_count):
     rows = 5
     columns = 9
 
-    grid = [[0 for col in range(columns) for row in range(rows)]] # 5 x 9
+    grid = [[0 for col in range(columns)] for row in range(rows)] # 5 x 9
 
     number = 1 # 시작 숫자를 1부터 number_count까지, 만약 5라면 5까지 숫자를 랜덤으로 배치
     while number <= number_count:
