@@ -34,11 +34,44 @@ def browse_dest_path():
 
 # 이미지 통합
 def merge_image():
+    #print("가로넓이 : ", cmb_width.get())
+    #print("간격 : ", cmb_space.get())
+    #print("포맷 : ", cmb_format.get())
+
+    # 가로넓이
+    img_width = cmb_width.get()
+    if img_width == "원본유지":
+        img_width = -1 # -1 일때는 원본 기준으로
+    else:
+        img_width = int(img_width)
+
+    # 간격
+    img_space = cmb_space.get()
+    if img_space == "좁게":
+        img_space = 30
+    elif img_space == "보통":
+        img_space = 60
+    elif img_space == "넓게":
+        img_space = 90
+    else:
+        img_space = 0
+
+    # 포맷
+    img_format = cmb_format.get().lower()@ PNG, JPG, BMP 값을 받아와서 소문자로 변경
+
+
+    ##################################################
+
+
     #print(list_file.get(0, END)) # 모든 파일 목록을 가져오기
     images = [Image.open(x) for x in list_file.get(0, END)]
-    # size -> size[0] : width, size[1] : height
-    widths = [x.size[0] for x in images]
-    heights = [x.size[1] for x in images]
+    
+    # 이미지 사이즈 리스트에 넣어서 하나씩 처리
+    image_sizes = [] # [(width1, height1), (width2, height2), ...]
+    if img_width > -1:
+        
+    #[(10, 10), (20, 20), (30, 30)]
+    widths, heights = zip(*(x.size for x in images))
 
     # 이미지의 최대넓이 전체높이
     max_width, total_height = max(widths), sum(heights)
