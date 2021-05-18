@@ -2,7 +2,7 @@ import tkinter.ttk as ttk
 import tkinter.messagebox as msgbox
 from tkinter import * # __all__ 여기에 명시해주지 않으면 서브 모듈은 다운받지 않는다
 from tkinter import filedialog
-
+from PIL import Image
 root = Tk()
 root.title("Nado GUI")
 
@@ -10,7 +10,7 @@ root.title("Nado GUI")
 def add_file():
     files = filedialog.askopenfilenames(title="이미지 파일을 선택하세요", \
         filetypes=(("PNG 파일","*.png"), ("모든 파일", "*,*")), \
-        initialdir=r"C:\Users\이정훈\Desktop\phython\PythonWorkspace\pygame_project\image") #최초에 C:/ 경로를 보여줌
+        initialdir=r"C:\Users\이정훈\Desktop\phython") #최초에 C:/ 경로를 보여줌
 
     # 사용자가 선택한 파일 목록 추가
     for file in files:
@@ -30,7 +30,9 @@ def browse_dest_path():
     txt_dest_path.delete(0, END)
     txt_dest_path.insert(0, folder_selected)
 
-
+# 이미지 통합
+def merge_image():
+    #print(list_file.get(0, END)) # 모든 파일 목록을 가져오기
 # 시작
 def start():
     # 각 옵션들 값을 확인
@@ -48,6 +50,8 @@ def start():
         msgbox.showwarning("경고", "저장 경로를 선택하세요")
         return
 
+    # 이미지 통합 작업
+    merge_image()
 
 
 # 파일 프레임 (파일 추가, 선택 삭제)
