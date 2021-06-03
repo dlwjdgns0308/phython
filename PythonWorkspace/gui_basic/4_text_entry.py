@@ -21,5 +21,5 @@ def btncmd():
     e.delete(0, END)
 
 btn = Button(root, text="클릭", command=btncmd)
-btn.pack()
+btn.pack() 
 root.mainloop()
