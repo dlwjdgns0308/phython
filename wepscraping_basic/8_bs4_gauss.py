@@ -22,3 +22,4 @@ for cartoon in cartoons:
     total_rates += float(rate)
 print("전체 점수 : ", total_rates)
 print("평균 점수 : ", total_rates / len(cartoons))
+# 더 자세한 내용은 Google에서 Beautifulsoup을 검색하세요
